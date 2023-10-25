@@ -1,0 +1,62 @@
+
+body{
+    background: rgb(31,38,67);
+    background: linear-gradient(167deg, rgba(31,38,67,1) 0%, rgba(31,38,67,1) 97%);
+}
+
+.contenedorEntradas {
+    display: flui;
+    margin-left: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 2fr)); 
+    gap:1rem;
+    grid-auto-rows: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.label-letra{
+    font-size: 20px;
+    color: beige;
+    margin-right: 10px;
+}
+
+
+.btn{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.btnCalcular{
+    display: flex;
+    background-color: #3498db; 
+    color: #fff; 
+    padding: 10px 20px;
+    border: none; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    cursor: pointer; 
+}
+.contenedorTablas{
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 25rem), 2fr)); 
+    gap:1rem;
+    grid-auto-rows: 22rem;
+    justify-content: center;
+    align-items: center;
+}
+.imagen-encabezado{
+    width: 400px;
+    margin-bottom: 60px;
+}
+
+
+.tablaEstilo {
+    text-align: center; 
+    color: white; 
+    font-size: 24px; 
+}

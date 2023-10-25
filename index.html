@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You are on your own kid</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+</head>
+<body>
+    <form>
+
+        <div id="contenedorEntradas" class="contenedorEntradas"></div>
+        <div class="btn">
+            <button type="button" id="botonCalcular" class="btnCalcular">Calcular</button>
+        </div>
+        <div class="albumListas" id="albumListas"></div>
+        <div class="contenedorTablas">
+            <div id="tablaDebut"></div>
+            <div id="tablaFearless"></div>
+            <div id="tablaSpeakNow"></div>
+            <div id="tablaRed"></div>
+            <div id="tabla1989"></div>
+            <div id="tablaRep"></div>
+            <div id="tablaLover"></div>
+            <div id="tablaFolklore"></div>
+            <div id="tablaEvermore"></div>
+            <div id="tablaMid"></div>
+            <div id="tablaRandom"></div>
+        </div>
+
+    </form> 
+
+    <script type="text/javascript">
+
+        var entradas = [
+            { letra: 'A', cantidad: 0 }, 
+            { letra: 'B', cantidad: 0 },
+            { letra: 'C', cantidad: 0 },
+            { letra: 'D', cantidad: 0 },
+            { letra: 'E', cantidad: 0 },
+            { letra: 'F', cantidad: 0 },
+            { letra: 'G', cantidad: 0 }, 
+            { letra: 'H', cantidad: 0 },
+            { letra: 'I', cantidad: 0 },
+            { letra: 'J', cantidad: 0 },
+            { letra: 'K', cantidad: 0 },
+            { letra: 'L', cantidad: 0 },
+            { letra: 'M', cantidad: 0 }, 
+            { letra: 'N', cantidad: 0 },
+            { letra: 'O', cantidad: 0 },            
+            { letra: 'P', cantidad: 0 },
+            { letra: 'Q', cantidad: 0 },
+            { letra: 'R', cantidad: 0 },
+            { letra: 'S', cantidad: 0 },
+            { letra: 'T', cantidad: 0 }, 
+            { letra: 'U', cantidad: 0 },
+            { letra: 'V', cantidad: 0 },
+            { letra: 'W', cantidad: 0 },
+            { letra: 'Y', cantidad: 0 },
+            { letra: 'Z', cantidad: 0 },
+        ];
+
+
+        $(document).ready(() => {
+
+            for (var entrada of entradas) {
+
+                $("#contenedorEntradas").append(`<div>
+                    <label class="label-letra">${entrada.letra}</label>
+                    <input type="checkbox" class="checkbox-letra" data-letra="${entrada.letra}" id="letra-${entrada.letra}">
+                    <input type="number" min="0" id="cantidad-${entrada.letra}" value="${entrada.cantidad}">
+                </div>`);
+
+            }
+
+            $("#botonCalcular").click(() => {
+
+                var datosIngresados = [];
+
+                $(".checkbox-letra:checked").each((i, element) => {
+
+                    var letra = $(element).data('letra');
+                    var cant = $("#cantidad-" + letra).val();
+
+                    datosIngresados.push({ letra: letra, cantidad: +cant });
+                });
+                
+                //----------------- DEBUT
+                
+                var imgDebut= "debut.png";
+                var listaDebut = listadoFinal(datosIngresados, arrayDebut);
+                crearTabla(listaDebut, imgDebut, "tablaDebut");
+
+                //--------------- FEARLESS                
+                var imgF= "fearless.png";
+                var listaFear = listadoFinal(datosIngresados, arrayFearless);
+                crearTabla(listaFear, imgF, "tablaFearless");
+
+                //----------------- SPEAK NOW
+                
+                var imgSP= "speak-now.webp";
+                var listaSP = listadoFinal(datosIngresados, arraySPNow);
+                crearTabla(listaSP, imgSP, "tablaSpeakNow");
+                //--------------- RED
+                var imgRed= "red.webp";
+                var listaRed= listadoFinal(datosIngresados, arrayRed);
+                crearTabla(listaRed, imgRed, "tablaRed");                
+                //----------------- 1989
+                
+                var img1989= "1989.png";
+                var lista1989 = listadoFinal(datosIngresados, array1989);
+                crearTabla(lista1989, img1989, "tabla1989");
+                //--------------- REP
+
+                var imgRep= "rep.png";
+                var listaRep = listadoFinal(datosIngresados, arrayReputation);
+                crearTabla(listaRep, imgRep, "tablaRep");
+                //----------------------- LOVER
+                
+                var imgLover= "lover.png";
+                var listaLover = listadoFinal(datosIngresados, arrayLover);
+                crearTabla(listaLover, imgLover, "tablaLover");
+                //----------------- FOLKLORE
+                
+                var imgFolklore= "folklore.png";
+                var listaFolk = listadoFinal(datosIngresados, arrayFolklore);
+                crearTabla(listaFolk, imgFolklore, "tablaFolklore");
+                //--------------- EVERMORE
+
+                var imgEvermore= "evermore.png";
+                var listaEver = listadoFinal(datosIngresados, arrayEvermore);
+                crearTabla(listaEver, imgEvermore, "tablaEvermore");
+
+                //----------------- MIDNIGHTS
+                
+                var imgMid= "midnights.png";
+                var listaMid = listadoFinal(datosIngresados, arrayMid);
+                crearTabla(listaMid, imgMid, "tablaMid");
+
+            });
+
+        });
+
+
+        function listadoFinal(datosIngresados, listadoCanciones){
+            var listado = [ ];
+
+            for(var i = 0; i< listadoCanciones.length; i++){
+                var cancion = listadoCanciones[i];
+                var valido = comprobarFrase2(datosIngresados, cancion);
+                if(valido){
+                    listado.push(cancion);
+                }
+            }
+                return listado;
+        }
+
+
+        function comprobarFrase2(datosIngresados, frase) {
+
+            var letrasFrase = [];
+
+            for (var caracter of frase) {
+                
+                var letraExistente = letrasFrase.find((i) => i.letra == caracter);
+                if (letraExistente) {
+                    letraExistente.cantidad++;
+                } else {
+                    letrasFrase.push({ letra: caracter, cantidad: 1 });
+                }
+
+            }
+
+            for (var letraFrase of letrasFrase) {
+
+                var di = datosIngresados.find((i) => i.letra == letraFrase.letra);
+
+                if (!di) {
+                    return false;
+                }
+                
+                if (di.cantidad < letraFrase.cantidad) {
+                    return false;
+                }
+
+            }
+
+            return true;
+
+        }
+
+        function crearTabla(lista, urlImagen, id){
+            var columnas = 1;
+            var tabla = "";
+            var contenidoContenedor = " ";
+            contenidoContenedor+=`<img src="${urlImagen}" class="imagen-encabezado">`;
+
+            contenidoContenedor+="<table class='tabla'>";
+                for(var i=0 ; i<lista.length; i++){
+                    contenidoContenedor+="<tr>";
+                    for(var j=0; j< columnas; j++){
+                        contenidoContenedor+="<td class='tablaEstilo'>"+lista[j]+"</td>";
+                    }
+                    contenidoContenedor+="</tr>";
+                }
+            contenidoContenedor+="</table>";    
+            $("#" + id).html(contenidoContenedor);
+        }
+
+
+    </script>
+
+    </body>
+</html>
