@@ -4,62 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>You are on your own kid</title>
+    <link rel="icon" type="image/png" href="icon.png"></link>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">   
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script type="text/javascript" src="main.js"></script>
 </head>
 <body>
     <form>
-
+        <div class="divCabecera">
+            <img src="eras.png" class="imagen-titulo">
+        </div>
+        <div class="divInstrucciones">
+            <h1 class="titulo-instrucciones">Instrucciones</h1>
+            <p class="contenido-instrucciones">
+            <span >Da click al casillero de la letra que tenés y elegí la cantidad. Cuando hayas ingresado
+                todas, apreta el botón de</span><span class="calcular-contenido">calcular</span>
+            </p>
+            <span class="contenido-instrucciones">Debajo aparecerá un listado por cada era.</span>
+        </div>
         <div id="contenedorEntradas" class="contenedorEntradas"></div>
         <div class="btn">
-            <button type="button" id="botonCalcular" class="btnCalcular">Calcular</button>
+            <button type="button" id="botonCalcular" class="btnCalcular">CALCULAR</button>
         </div>
         <div class="albumListas" id="albumListas"></div>
         <div class="contenedorTablas">
-            <div id="tablaDebut"></div>
-            <div id="tablaFearless"></div>
-            <div id="tablaSpeakNow"></div>
-            <div id="tablaRed"></div>
-            <div id="tabla1989"></div>
-            <div id="tablaRep"></div>
-            <div id="tablaLover"></div>
-            <div id="tablaFolklore"></div>
-            <div id="tablaEvermore"></div>
-            <div id="tablaMid"></div>
-            <div id="tablaRandom"></div>
+            <div id="tablaDebut"  class="album-container"></div>
+            <div id="tablaFearless"  class="album-container"></div>
+            <div id="tablaSpeakNow"  class="album-container"></div>
+            <div id="tablaRed"  class="album-container"></div>
+            <div id="tabla1989"  class="album-container"></div>
+            <div id="tablaRep"  class="album-container"></div>
+            <div id="tablaLover"  class="album-container"></div>
+            <div id="tablaFolklore"  class="album-container"></div>
+            <div id="tablaEvermore"  class="album-container"></div>
+            <div id="tablaMid"  class="album-container"></div>
+            <div id="tablaRandom"  class="album-container"></div>
         </div>
-
+     <footer>
+         <div class="social">
+             <a href='https://github.com/ludmilaboffo'  target="_blank"><i class="fa-brands fa-github-alt"></i> </a>   
+             <a href="https://cafecito.app/aphroditespell" target="_blank"><i class="fas fa-coffee" ></i></a>                    
+         </div>
+         <div class="div-audio">
+             <audio controls autoplay>
+              <source src="YOYOK.mp3">
+            </audio>
+         </div>
+     </footer>
     </form> 
 
     <script type="text/javascript">
 
         var entradas = [
-            { letra: 'A', cantidad: 0 }, 
-            { letra: 'B', cantidad: 0 },
-            { letra: 'C', cantidad: 0 },
-            { letra: 'D', cantidad: 0 },
-            { letra: 'E', cantidad: 0 },
-            { letra: 'F', cantidad: 0 },
-            { letra: 'G', cantidad: 0 }, 
-            { letra: 'H', cantidad: 0 },
-            { letra: 'I', cantidad: 0 },
-            { letra: 'J', cantidad: 0 },
-            { letra: 'K', cantidad: 0 },
-            { letra: 'L', cantidad: 0 },
-            { letra: 'M', cantidad: 0 }, 
-            { letra: 'N', cantidad: 0 },
-            { letra: 'O', cantidad: 0 },            
-            { letra: 'P', cantidad: 0 },
-            { letra: 'Q', cantidad: 0 },
-            { letra: 'R', cantidad: 0 },
-            { letra: 'S', cantidad: 0 },
-            { letra: 'T', cantidad: 0 }, 
-            { letra: 'U', cantidad: 0 },
-            { letra: 'V', cantidad: 0 },
-            { letra: 'W', cantidad: 0 },
-            { letra: 'Y', cantidad: 0 },
-            { letra: 'Z', cantidad: 0 },
+            { letra: 'A', cantidad: 25 }, 
+            { letra: 'B', cantidad: 25 },
+            { letra: 'C', cantidad: 26 },
+            { letra: 'D', cantidad: 10 },
+            { letra: 'E', cantidad: 10 },
+            { letra: 'F', cantidad: 10 },
+            { letra: 'G', cantidad: 10 }, 
+            { letra: 'H', cantidad: 10 },
+            { letra: 'I', cantidad: 10 },
+            { letra: 'J', cantidad: 10 },
+            { letra: 'K', cantidad: 10 },
+            { letra: 'L', cantidad: 10 },
+            { letra: 'M', cantidad: 10 }, 
+            { letra: 'N', cantidad: 10 },
+            { letra: 'O', cantidad: 10 },            
+            { letra: 'P', cantidad: 10 },
+            { letra: 'Q', cantidad: 10 },
+            { letra: 'R', cantidad: 10 },
+            { letra: 'S', cantidad: 10 },
+            { letra: 'T', cantidad: 10 }, 
+            { letra: 'U', cantidad: 10 },
+            { letra: 'V', cantidad: 10 },
+            { letra: 'W', cantidad: 10 },
+            { letra: 'Y', cantidad: 10 },
+            { letra: 'Z', cantidad: 10 },
         ];
 
 
@@ -154,13 +176,16 @@
                     listado.push(cancion);
                 }
             }
+                console.log(listado);
                 return listado;
         }
 
+        
 
         function comprobarFrase2(datosIngresados, frase) {
 
             var letrasFrase = [];
+            frase = frase.replace(/ /g, '');
 
             for (var caracter of frase) {
                 
@@ -191,25 +216,24 @@
 
         }
 
-        function crearTabla(lista, urlImagen, id){
-            var columnas = 1;
-            var tabla = "";
-            var contenidoContenedor = " ";
-            contenidoContenedor+=`<img src="${urlImagen}" class="imagen-encabezado">`;
+        function crearTabla(lista, urlImagen, id) {
+            var contenidoContenedor = `
+                
+                    <img src="${urlImagen}" class="imagen-encabezado">
+                    <ul>
+            `;
 
-            contenidoContenedor+="<table class='tabla'>";
-                for(var i=0 ; i<lista.length; i++){
-                    contenidoContenedor+="<tr>";
-                    for(var j=0; j< columnas; j++){
-                        contenidoContenedor+="<td class='tablaEstilo'>"+lista[j]+"</td>";
-                    }
-                    contenidoContenedor+="</tr>";
-                }
-            contenidoContenedor+="</table>";    
+            for (var i = 0; i < lista.length; i++) {
+                contenidoContenedor += "<li class='canciones-li'>" + lista[i] + "</li>";
+            }
+
+            contenidoContenedor += `
+                    </ul>
+               
+            `;
+
             $("#" + id).html(contenidoContenedor);
         }
-
-
     </script>
 
     </body>

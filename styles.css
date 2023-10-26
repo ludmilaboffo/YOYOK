@@ -1,25 +1,82 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Dawning+of+a+New+Day&family=Kanit&family=Quicksand&family=Roboto+Slab:wght@500&family=Shadows+Into+Light&display=swap');
 body{
     background: rgb(31,38,67);
     background: linear-gradient(167deg, rgba(31,38,67,1) 0%, rgba(31,38,67,1) 97%);
 }
 
 .contenedorEntradas {
-    display: flui;
     margin-left: 20px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 2fr)); 
     gap:1rem;
-    grid-auto-rows: 3rem;
     justify-content: center;
-    align-items: center;
+    align-items: start;
 }
 
 
 .label-letra{
     font-size: 20px;
-    color: beige;
-    margin-right: 10px;
+    color: rgb(255, 255, 255);
+    font-family: 'Quicksand', sans-serif;
+}
+
+input[type="number"] {
+    height: 2rem; /* Ajusta la altura según tu preferencia */
+    width: 4rem;
+    margin: 3%;
+    font-size: 20px; /* Ajusta el ancho según tu preferencia */
+    /* Otros estilos, si es necesario */
+  }
+  
+.album-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 3rem;
+}
+.divCabecera{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.imagen-titulo{
+    max-width: 80%;
+    height: auto;
+    animation: grow 5s ease-in-out; 
+}
+.divInstrucciones{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.titulo-instrucciones, .calcular-contenido{
+    justify-content: center;
+    text-align: center;
+    margin-left: 3%;
+    color: #fff;
+}
+.titulo-instrucciones{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 80px; 
+    font-family: 'Dawning of a New Day', cursive;
+}
+.contenido-instrucciones {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 25px;
+    color: #fff;
+    font-family: 'Quicksand', sans-serif;
+  }
+
+.calcular-contenido{
+    margin-bottom: 2rem;
+    margin-left: 1%;
+    font-size: 40px;
+    font-family: 'Dawning of a New Day', cursive;
+    color:#6161e2;
 }
 
 
@@ -28,35 +85,96 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 2%;
 }
 .btnCalcular{
-    display: flex;
-    background-color: #3498db; 
-    color: #fff; 
-    padding: 10px 20px;
-    border: none; 
-    border-radius: 5px; 
-    font-size: 16px; 
-    cursor: pointer; 
+    padding: 15px 40px;
+    background-color:#292980;
+    color: #fff;
+    border: none;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1em;
+    border-radius: 0.5rem;
+    margin-top: 2%;
+    margin-bottom: 3%;
+    cursor: pointer;
+    box-shadow: 1px 3px 11px -5px rgba(0, 0, 0, 0.69);
 }
+.btnCalcular:hover{
+        background-color: darkslateblue;
+        box-shadow: none;
+        transform: translateY(-3px);
+   }
+
 .contenedorTablas{
     margin-top: 100px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 25rem), 2fr)); 
+    grid-template-columns: repeat(auto-fill, minmax(min(90%, 25rem), 2fr)); 
     gap:1rem;
-    grid-auto-rows: 22rem;
     justify-content: center;
     align-items: center;
 }
 .imagen-encabezado{
     width: 400px;
     margin-bottom: 60px;
+    animation: iconoflotauno 2s infinite ease-in-out; 
 }
 
-
-.tablaEstilo {
-    text-align: center; 
-    color: white; 
-    font-size: 24px; 
+.canciones-li{
+    color:#fff;
+    list-style: none;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 1.5rem;
+    
 }
+
+.social{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 90px;
+}
+.social i{
+    color:darkslateblue;
+    font-size: 4rem;
+    margin-top: 190px;
+    margin-right: 5rem;
+    transition: 0.5s;
+    max-width: 100%;
+}
+
+.social i:hover{
+    color:#fff;
+    transform: rotate(360deg);
+}
+.div-audio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.div-audio audio{
+   width: 30%;
+   color:#292980;
+   margin-bottom: 20px;
+}
+
+@keyframes iconoflotauno {
+    0% {
+        transform: translateY(0); 
+    }
+    50% {
+        transform: translateY(-10px); 
+    }
+    100% {
+        transform: translateY(0); 
+    }
+}
+@keyframes grow {
+    0% {
+      transform: scale(0.1); /* Comienza pequeña */
+    }
+    100% {
+      transform: scale(1); /* Alcanza su tamaño original */
+    }
+  }
+  
