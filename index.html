@@ -114,64 +114,12 @@
 
                     datosIngresados.push({ letra: letra, cantidad: +cant });
                 });
-                
-                //----------------- DEBUT
-                
-                var imgDebut= "assets/debut.png";
-                var listaDebut = listadoFinal(datosIngresados, arrayDebut);
-                crearTabla(listaDebut, imgDebut, "tablaDebut");
 
-                //--------------- FEARLESS                
-                var imgF= "assets/fearless.png";
-                var listaFear = listadoFinal(datosIngresados, arrayFearless);
-                crearTabla(listaFear, imgF, "tablaFearless");
-
-                //----------------- SPEAK NOW
-                
-                var imgSP= "assets/speak-now.webp";
-                var listaSP = listadoFinal(datosIngresados, arraySPNow);
-                crearTabla(listaSP, imgSP, "tablaSpeakNow");
-                //--------------- RED
-                var imgRed= "assets/red.webp";
-                var listaRed= listadoFinal(datosIngresados, arrayRed);
-                crearTabla(listaRed, imgRed, "tablaRed");                
-                //----------------- 1989
-                
-                var img1989= "assets/1989.png";
-                var lista1989 = listadoFinal(datosIngresados, array1989);
-                crearTabla(lista1989, img1989, "tabla1989");
-                //--------------- REP
-
-                var imgRep= "assets/rep.png";
-                var listaRep = listadoFinal(datosIngresados, arrayReputation);
-                crearTabla(listaRep, imgRep, "tablaRep");
-                //----------------------- LOVER
-                
-                var imgLover= "assets/lover.png";
-                var listaLover = listadoFinal(datosIngresados, arrayLover);
-                crearTabla(listaLover, imgLover, "tablaLover");
-                //----------------- FOLKLORE
-                
-                var imgFolklore= "assets/folklore.png";
-                var listaFolk = listadoFinal(datosIngresados, arrayFolklore);
-                crearTabla(listaFolk, imgFolklore, "tablaFolklore");
-                //--------------- EVERMORE
-
-                var imgEvermore= "assets/evermore.png";
-                var listaEver = listadoFinal(datosIngresados, arrayEvermore);
-                crearTabla(listaEver, imgEvermore, "tablaEvermore");
-
-                //----------------- MIDNIGHTS
-                
-                var imgMid= "assets/midnights.png";
-                var listaMid = listadoFinal(datosIngresados, arrayMid);
-                crearTabla(listaMid, imgMid, "tablaMid");
-                //----------------- RANDOM
-                
-                var imgRandom= "assets/iniciales.png";
-                var listaRandom = listadoFinal(datosIngresados, arraySilabas);
-                crearTabla(listaRandom, imgRandom, "tablaRandom");
-
+                arrayAlbums.forEach((album)=>{
+                    let img = `assets/${album.image}`
+                    let lista = listadoFinal(datosIngresados, album.array)
+                    crearTabla(lista, img, album.tableName)
+                })
             });
 
         });
