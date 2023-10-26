@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Dawning+of+a+New+Day&family=Kanit&family=Quicksand&family=Roboto+Slab:wght@500&family=Shadows+Into+Light&display=swap');
 body{
     background: rgb(31,38,67);
+    margin: 5px;
     background: linear-gradient(167deg, rgba(31,38,67,1) 0%, rgba(31,38,67,1) 97%);
 }
 

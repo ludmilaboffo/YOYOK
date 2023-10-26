@@ -96,6 +96,12 @@
                 </div>`);
 
             }
+            document.addEventListener('DOMContentLoaded', function () {
+                var audio = document.querySelector('audio');
+                if (audio) {
+                    audio.play();
+                }
+            });
 
             $("#botonCalcular").click(() => {
 
