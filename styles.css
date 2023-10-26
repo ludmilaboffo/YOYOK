@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Dawning+of+a+New+Day&family=Kanit&family=Quicksand&family=Roboto+Slab:wght@500&family=Shadows+Into+Light&display=swap');
 body{
-    background: rgb(31,38,67);
+    background: rgb(57, 68, 112);
     padding: 15px;
     background: linear-gradient(167deg, rgba(31,38,67,1) 0%, rgba(31,38,67,1) 97%);
 }
@@ -8,7 +8,7 @@ body{
 .contenedorEntradas {
     margin-left: 20px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 2fr)); 
+    grid-template-columns: repeat(auto-fill, minmax(min(90%, 15rem), 2fr)); 
     gap:1rem;
     justify-content: center;
     align-items: start;
@@ -61,13 +61,13 @@ input[type="number"] {
 .titulo-instrucciones{
     margin-top: 0;
     margin-bottom: 0;
-    font-size: 80px; 
+    font-size: 70px; 
     font-family: 'Dawning of a New Day', cursive;
 }
 .contenido-instrucciones {
     text-align: center;
     margin-bottom: 2rem;
-    font-size: 25px;
+    font-size: 20px;
     color: #fff;
     font-family: 'Quicksand', sans-serif;
   }
