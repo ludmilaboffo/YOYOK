@@ -24,6 +24,7 @@ const arrayDebut = [
     "PICTURE TO BURN",
     "SHOULDVE SAID NO",
     "COLD AS YOU",
+    "UNTOUCHABLE",
 ];    
 
 const arrayFearless = [
@@ -34,7 +35,6 @@ const arrayFearless = [
     "SUPERSTAR",
     "BREATH",
     "THE BEST DAY",
-
     "ROMEO",
     "JULIET",
     "FIFTEEN",
@@ -184,7 +184,6 @@ const arrayReputation = [
 const arrayLover = [
     "THE ARCHER",
     "JANUARY",
-
     "LONDON BOY",
     "CORNELIA ST",
     "AFTERGLOW",
@@ -333,6 +332,7 @@ const arraySilabas = [
     "TOSOTD", //--- Fearless
     "YBWM", // -- FEARLESs
     "ATWTMVTVFTV", // RED   
+    "WANEGBT",
     "OOTW", // 1989
     "AYHTDWS", // 1989
     "WTNY", // 1989
@@ -356,6 +356,7 @@ const arraySilabas = [
     "SATB", // MID
     "BTTHS", // MID
     "WVCVSV",// MID
+    "APTW",
 ];
 
 
