@@ -57,31 +57,31 @@
     <script type="text/javascript">
 
         var entradas = [
-            { letra: 'A', cantidad: 25 }, 
-            { letra: 'B', cantidad: 25 },
-            { letra: 'C', cantidad: 26 },
-            { letra: 'D', cantidad: 10 },
-            { letra: 'E', cantidad: 10 },
-            { letra: 'F', cantidad: 10 },
-            { letra: 'G', cantidad: 10 }, 
-            { letra: 'H', cantidad: 10 },
-            { letra: 'I', cantidad: 10 },
-            { letra: 'J', cantidad: 10 },
-            { letra: 'K', cantidad: 10 },
-            { letra: 'L', cantidad: 10 },
-            { letra: 'M', cantidad: 10 }, 
-            { letra: 'N', cantidad: 10 },
-            { letra: 'O', cantidad: 10 },            
-            { letra: 'P', cantidad: 10 },
-            { letra: 'Q', cantidad: 10 },
-            { letra: 'R', cantidad: 10 },
-            { letra: 'S', cantidad: 10 },
-            { letra: 'T', cantidad: 10 }, 
-            { letra: 'U', cantidad: 10 },
-            { letra: 'V', cantidad: 10 },
-            { letra: 'W', cantidad: 10 },
-            { letra: 'Y', cantidad: 10 },
-            { letra: 'Z', cantidad: 10 },
+            { letra: 'A', cantidad: 0 }, 
+            { letra: 'B', cantidad: 0 },
+            { letra: 'C', cantidad: 0 },
+            { letra: 'D', cantidad: 0 },
+            { letra: 'E', cantidad: 0 },
+            { letra: 'F', cantidad: 0 },
+            { letra: 'G', cantidad: 0 }, 
+            { letra: 'H', cantidad: 0 },
+            { letra: 'I', cantidad: 0 },
+            { letra: 'J', cantidad: 0 },
+            { letra: 'K', cantidad: 0 },
+            { letra: 'L', cantidad: 0 },
+            { letra: 'M', cantidad: 0 }, 
+            { letra: 'N', cantidad: 0 },
+            { letra: 'O', cantidad: 0 },            
+            { letra: 'P', cantidad: 0 },
+            { letra: 'Q', cantidad: 0 },
+            { letra: 'R', cantidad: 0 },
+            { letra: 'S', cantidad: 0 },
+            { letra: 'T', cantidad: 0 }, 
+            { letra: 'U', cantidad: 0 },
+            { letra: 'V', cantidad: 0 },
+            { letra: 'W', cantidad: 0 },
+            { letra: 'Y', cantidad: 0 },
+            { letra: 'Z', cantidad: 0 },
         ];
 
 
@@ -160,6 +160,11 @@
                 var imgMid= "midnights.png";
                 var listaMid = listadoFinal(datosIngresados, arrayMid);
                 crearTabla(listaMid, imgMid, "tablaMid");
+                //----------------- RANDOM
+                
+                var imgRandom= "silabas.png";
+                var listaRandom = listadoFinal(datosIngresados, arraySilabas);
+                crearTabla(listaRandom, imgRandom, "tablaRandom");
 
             });
 
