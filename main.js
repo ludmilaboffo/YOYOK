@@ -126,6 +126,22 @@ const array1989 = [
     "OUT OF THE WOODS",
     "BLANK SPACE",
     "STAY",
+    "JAMES DEAN",
+    "DAYDREAM LOOK",
+    "GOOD GIRL FAITH",
+    "SUBURBAN LEYENDS",
+    "NICE TO MEET YOU",
+    "MAGIC",
+    "MADNESS",
+    "SCREAMING CRYING",
+    "RUMOURS FLY",
+    "SO ITS GONNA BE FOREVER",
+    "LIST OF EX LOVERS",
+    "IS IT OVER NOW",
+    "SAY DONT GO",
+    "YOU LOVE THE GAME",
+    "YOUNG AND RECLKESS",
+    "WITH A NASTY SCAR",
     "SHAKE IT OFF",
     "I WISH YOU WOULD",
     "BAD BLOOD",
@@ -151,6 +167,14 @@ const array1989 = [
     "WANNA PLAY",
     "THIS SICK BEAT",
     "NICE DRESS",
+    "I WANT YOU",
+    "HOW TO GET THE GIRL",
+    "FOR BETTER",
+    "FOR WORST",
+    "KISSES ON CHICKS",
+    "IS IT OVER NOW",
+    "U THE GAME",
+
 ];
 
 
@@ -336,8 +360,10 @@ const arraySilabas = [
     "OOTW", // 1989
     "AYHTDWS", // 1989
     "WTNY", // 1989
+    "IWIW",
     "YGTG", // 1989
     "TIABFTD", //1989
+    "NTWDT",
     "TIWWCHNT", // REP
     "LWYMMD", // REP
     "ZZZZ", // REP
@@ -359,4 +385,16 @@ const arraySilabas = [
     "APTW",
 ];
 
-
+const arraySabrina = [
+    "READ UR MIND",
+    "FEATHER",
+    "VICIOUS",
+    "ALREADY OVER",
+    "TORNADO WARNINGS",
+    "OPPOSITE",
+    "FAST TIMES",
+    "BECAUSE I LIKED A BOY",
+    "NONSENSE",
+    "IM A SLUT",
+    "IM HARD TOPIC ON YOUR THONGE",
+];

@@ -21,7 +21,7 @@
             <span >Da click al casillero de la letra que tenés y elegí la cantidad. Cuando hayas ingresado
                 todas, apreta el botón de</span><span class="calcular-contenido">calcular</span>
             </p>
-            <span class="contenido-instrucciones">Debajo aparecerá un listado por cada era.</span>
+            <span class="contenido-instrucciones">Debajo aparecerá un listado por cada era. No olvides seleccionar la letra antes de apretar el botón.</span>
         </div>
         <div id="contenedorEntradas" class="contenedorEntradas"></div>
         <div class="btn">
@@ -40,6 +40,7 @@
             <div id="tablaEvermore"  class="album-container"></div>
             <div id="tablaMid"  class="album-container"></div>
             <div id="tablaRandom"  class="album-container"></div>
+            <div id="tablaSabrina"  class="album-container"></div>
         </div>
      <footer>
          <div class="social">
@@ -47,7 +48,7 @@
              <a href="https://cafecito.app/aphroditespell" target="_blank"><i class="fas fa-coffee" ></i></a>                    
          </div>
          <div class="pie-titulos">
-            <i>¡Mira mis otros proyectos!</i>>   
+            <i>¡Mira mis otros proyectos!</i>  
             <i>¡Invitame un cafecito!</i>
         </div>
          <div class="div-audio">
@@ -176,6 +177,9 @@
                 var listaRandom = listadoFinal(datosIngresados, arraySilabas);
                 crearTabla(listaRandom, imgRandom, "tablaRandom");
 
+                var listaBrina = listadoFinal(datosIngresados, arraySabrina);
+                var imgBrina="sabrina-carpenter-Store-Logo-2.png";
+                crearTabla(listaBrina,imgBrina,"tablaSabrina");
             });
 
         });
