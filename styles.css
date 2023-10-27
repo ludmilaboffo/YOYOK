@@ -137,9 +137,10 @@ input[type="number"] {
 }
 .social i{
     color:darkslateblue;
-    font-size: 4rem;
+    font-size: 3rem;
     margin-top: 190px;
-    margin-right: 5rem;
+    margin-right: 7rem;
+    margin-left: 4rem;
     transition: 0.5s;
     max-width: 100%;
 }
@@ -147,6 +148,19 @@ input[type="number"] {
 .social i:hover{
     color:#fff;
     transform: rotate(360deg);
+}
+
+.pie-titulos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+}
+.pie-titulos i{
+    color:darkslateblue;
+    font-size: 1rem;
+    margin-bottom: 120px;
+    margin-right: 5rem;
 }
 .div-audio{
     display: flex;
