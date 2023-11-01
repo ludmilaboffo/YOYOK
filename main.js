@@ -80,6 +80,7 @@ const arraySPNow = [
     "CASTLES CRUMBLING",
     "STAY LITTLE",
     "ELECTRIC TOUCH",
+    "FXCK JOHN",
 ];
 
 const arrayRed = [
@@ -174,6 +175,7 @@ const array1989 = [
     "KISSES ON CHICKS",
     "IS IT OVER NOW",
     "U THE GAME",
+    "SPELLING IS FUN",
 
 ];
 
@@ -201,7 +203,9 @@ const arrayReputation = [
     "LORD SAVE ME",
     "YOUR DAISY",
     "I WAS POISON IVY",
-    "LIGHT ME UP"
+    "LIGHT ME UP",
+    "X MARKS THE SPOT",
+    "OCEAN BLUE EYES",
 
 ];
 
@@ -273,6 +277,8 @@ const arrayFolklore = [
     "OF IT ALL",
     "PURPLE PINK SKIES",
     "RUINNING EVERYTHING",
+    "ME YOU",
+    "BETTYS GARDEN",
 ];
 
 const arrayEvermore = [
