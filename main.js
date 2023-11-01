@@ -360,7 +360,7 @@ const arraySilabas = [
     "OOTW", // 1989
     "AYHTDWS", // 1989
     "WTNY", // 1989
-    "IWIW",
+    "IWYW",
     "YGTG", // 1989
     "TIABFTD", //1989
     "NTWDT",
